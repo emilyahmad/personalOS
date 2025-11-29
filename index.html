@@ -6,8 +6,22 @@
     <title>Document</title>
 </head>
 <body
-    style="font-family: Roboto; background-image: url(background.png); background-size: cover;">
+    style="font-family: Roboto; 
+    background-image: url(background.png);
+    background-size: cover;">
     
+    <div style="display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.25);
+    color: #fff;
+    font-family: Verdana;">
+        <p>AeroOS</p>
+        <p>What's on your mind?</p>
+        <p id="time">11/27/2025 9:52:37 PM</p>
+    </div>
 
     <div style="
     backdrop-filter: blur(1px);
@@ -27,7 +41,17 @@
 
 
     </div>
-
+    <div id="welcome" styles
 
 </body>
+
+<script>
+    function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var time = document.querySelector("#time");
+        time.innerHTML = currentTime;
+    }
+    setInterval(updateTime, 750);
+
+</script>
 </html>
